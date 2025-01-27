@@ -20,6 +20,7 @@ self.addEventListener('install', function (event) {
     // Perform install steps
     event.waitUntil(
         caches.open('v1').then(function (cache) {
+            console.log("install");
             console.log('Cache opened:', cache.name);
             return cache.addAll([
                 '/',
@@ -32,6 +33,7 @@ self.addEventListener('install', function (event) {
 self.addEventListener('fetch', function (event) {
     event.respondWith(
         caches.open(CACHE_NAME).then(async function (cache) {
+            console.log("fetch");
             // Log all cache keys (URLs of requests in cache)
             const cacheKeys = await cache.keys();
             console.log('Cache keys:', cacheKeys.map(request => request.url));
@@ -58,6 +60,7 @@ self.addEventListener('fetch', function (event) {
 });
 
 self.addEventListener('activate', (event) => {
+    console.log("activate");
     event.waitUntil(
         caches.open(CACHE_NAME).then(logCacheDetails)
     );
