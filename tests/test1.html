@@ -1,0 +1,17 @@
+<h1>Service Worker Test</h1>
+
+<p>this page contains serviceWorker tests</p>
+<button onclick="checkServiceWorkerStatus()">check Service Worker</button>
+
+<script src="resources/service-worker.js"></script>
+<link rel="stylesheet" href="resources/style.css">
+
+<script>
+    function checkServiceWorkerStatus() {
+        if ('serviceWorker' in navigator) {
+            alert('Service Worker exists');
+        } else {
+            alert('Service Worker doesn\'t exist');
+        }
+    }
+</script>
