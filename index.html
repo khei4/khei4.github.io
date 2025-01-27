@@ -14,7 +14,47 @@ title: khei4's memo
 <body>
     <h1>Hi. I'm khei4. 🎂</h1>
     <p>I'm a system software engineer.</p>
+    <button id="clearCacheButton">Clear Cache</button>
     <script>
+    document.getElementById('clearCacheButton').addEventListener('click', function () {
+        if ('caches' in window) {
+            // Confirmation dialog to ensure the user wants to clear the cache
+            if (confirm("Are you sure you want to clear all caches?")) {
+                caches.keys().then(function (names) {
+                    // Promise.all to wait for all caches to be deleted
+                    Promise.all(names.map(name => caches.delete(name)))
+                        .then(() => {
+                            console.log('All caches have been deleted.');
+                            alert('Cache cleared successfully!');
+                        })
+                        .catch(err => {
+                            console.error('Error clearing caches:', err);
+                            alert('Failed to clear the cache.');
+                        });
+                });
+            }
+        } else {
+            alert("Caching is not supported in this browser.");
+        }
+    });
+    if ('caches' in window) {
+        // List all cache names
+        caches.keys().then(function (cacheNames) {
+            console.log('Existing cache names:', cacheNames);
+
+            // Iterate over each cache name and log entries
+            cacheNames.forEach(function (cacheName) {
+                caches.open(cacheName).then(function (cache) {
+                    cache.keys().then(function (requests) {
+                        console.log(`Cache entries in ${cacheName}:`);
+                        requests.forEach(function (request) {
+                            console.log('Request URL:', request.url);
+                        });
+                    });
+                });
+            });
+        });
+    }
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {
                 navigator.serviceWorker.register('/assets/sw.js').then(function (registration) {

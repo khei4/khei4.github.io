@@ -1,3 +1,4 @@
+const CACHE_NAME = 'v2';
 async function logCacheDetails(cache) {
     console.log('Cache opened');
     console.log('Name:', cache.name);
@@ -30,7 +31,7 @@ self.addEventListener('install', function (event) {
 
 self.addEventListener('fetch', function (event) {
     event.respondWith(
-        caches.open('v1').then(async function (cache) {
+        caches.open(CACHE_NAME).then(async function (cache) {
             // Log all cache keys (URLs of requests in cache)
             const cacheKeys = await cache.keys();
             console.log('Cache keys:', cacheKeys.map(request => request.url));
@@ -58,6 +59,6 @@ self.addEventListener('fetch', function (event) {
 
 self.addEventListener('activate', (event) => {
     event.waitUntil(
-        caches.open('v1').then(logCacheDetails)
+        caches.open(CACHE_NAME).then(logCacheDetails)
     );
 });
