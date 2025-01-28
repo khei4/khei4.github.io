@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cache Test</title>
+    <script>
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/tests/resources/service-worker.js') // Correct path to the service worker
+                .then(() => {
+                    console.log('Service Worker registered successfully.');
+                })
+                .catch((error) => {
+                    console.error('Service Worker registration failed:', error);
+                });
+        }
+
+        // Get current cache status and display
+        async function updateStats() {
+            const statsContainer = document.getElementById('stats');
+            let stats = {
+                online: navigator.onLine ? 'online' : 'offline',
+                cacheStatus: 'unknown',
+            };
+
+            // Check cache status
+            if (caches) {
+                const cache = await caches.open('html-cache');
+                const response = await cache.match('/tests/test-service-worker.html');
+                stats.cacheStatus = response ? 'cache exists' : 'cache does not exist';
+            }
+
+            // Update display
+            statsContainer.innerHTML = `
+                <p>Connection status: ${stats.online}</p>
+                <p>Cache status: ${stats.cacheStatus}</p>
+            `;
+        }
+
+        window.addEventListener('load', updateStats);
+        window.addEventListener('online', updateStats);
+        window.addEventListener('offline', updateStats);
+    </script>
+</head>
+
+<body>
+    <h1>Service Worker Cache Test</h1>
+    <div id="stats">
+        <p>Getting status...</p>
+    </div>
+</body>
+
+</html>
