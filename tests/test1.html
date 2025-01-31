@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Content-Type Test</title>
+</head>
+<body>
+    <h1>Content-Type Test</h1>
+
+    <!--
+      1. application/x-www-form-urlencoded (if 節に該当)
+         通常のフォーム送信（デフォルトエンコーディング）。
+         この場合、mimeType は "application/x-www-form-urlencoded" になる。
+    -->
+    <h2>Form: application/x-www-form-urlencoded (default)</h2>
+    <form method="POST" action="/test-default">
+        <label>Key: <input type="text" name="key" value="value"></label>
+        <button type="submit">Submit (URL Encoded)</button>
+    </form>
+    <hr>
+
+    <!--
+      2. text/plain (else 節に該当)
+         フォーム送信時に text/plain となる。
+    -->
+    <h2>Form: text/plain</h2>
+    <form method="POST" action="/test-text-plain" enctype="text/plain">
+        <label>Key: <input type="text" name="key" value="value"></label>
+        <button type="submit">Submit (text/plain)</button>
+    </form>
+    <hr>
+
+    <!--
+      3. multipart/form-data (else 節に該当)
+         ファイルアップロードなどで用いられる一般的なエンコード方式。
+    -->
+    <h2>Form: multipart/form-data</h2>
+    <form method="POST" action="/test-multipart" enctype="multipart/form-data">
+        <label>File: <input type="file" name="myFile"></label><br>
+        <label>Text: <input type="text" name="key" value="value"></label>
+        <button type="submit">Submit (multipart/form-data)</button>
+    </form>
+    <hr>
+
+    <!--
+      4. JavaScript から Fetch: application/json (else 節に該当)
+         JS で直接 "Content-Type: application/json" を指定して送信。
+    -->
+    <h2>Fetch: application/json</h2>
+    <button onclick="sendJson()">Send JSON via Fetch</button>
+    <script>
+    function sendJson() {
+        fetch("/test-json", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ hello: "world" })
+        })
+        .then(response => response.text())
+        .then(text => {
+            console.log("Fetch response:", text);
+            alert("Fetch sent with application/json");
+        })
+        .catch(e => console.error("Fetch error:", e));
+    }
+    </script>
+    <hr>
+
+    <!--
+      5. JavaScript から Fetch: application/xml (else 節に該当)
+         JS で "Content-Type: application/xml" を指定して送信。
+         URL エンコードではないので こちらも --data-raw が相当する。
+    -->
+    <h2>Fetch: application/xml</h2>
+    <button onclick="sendXml()">Send XML via Fetch</button>
+    <script>
+    function sendXml() {
+        const xmlData = `<person><name>Taro</name><age>30</age></person>`;
+        fetch("/test-xml", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/xml"
+            },
+            body: xmlData
+        })
+        .then(response => response.text())
+        .then(text => {
+            console.log("Fetch response:", text);
+            alert("Fetch sent with application/xml");
+        })
+        .catch(e => console.error("Fetch error:", e));
+    }
+    </script>
+    <hr>
+
+    <!--
+      6. JavaScript から Fetch: Content-Type 未指定 (else 節に該当)
+         fetch であえて Content-Type をつけずに送信する例。
+    -->
+    <h2>Fetch: no Content-Type</h2>
+    <button onclick="sendNoContentType()">Send No Content-Type via Fetch</button>
+    <script>
+    function sendNoContentType() {
+        fetch("/test-empty", {
+            method: "POST",
+            // headers 指定なし
+            body: "No Content-Type here."
+        })
+        .then(response => response.text())
+        .then(text => {
+            console.log("Fetch response:", text);
+            alert("Fetch sent without Content-Type");
+        })
+        .catch(e => console.error("Fetch error:", e));
+    }
+    </script>
+
+</body>
+</html>
