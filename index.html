@@ -4,44 +4,51 @@ title: khei4's Blog
 ---
 
 <style>
+
 .postPreview {
-    background: #fdfdfd;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 1.5em;
-    margin-bottom: 2em;
-    transition: box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  background-color: #fafafa;
+  transition: box-shadow 0.3s;
 }
 
 .postPreview:hover {
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.postPreview h1 {
-    font-size: 1.8em;
-    margin-bottom: 0.2em;
+.post-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
 }
 
-.postPreview h1 a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
+.post-title a {
+  text-decoration: none;
+  color: #2c3e50;
 }
 
-.postPreview h1 a:hover {
-    color: #007acc;
+.post-title a:hover {
+  color: #007acc;
 }
 
-.postPreview time {
-    font-size: 0.9em;
-    color: #888;
+.external-label {
+  font-size: 0.85rem;
+  color: #999;
+  margin-right: 0.3em;
 }
 
-.postPreview > section {
-    margin-top: 1em;
-    font-size: 1em;
-    line-height: 1.6;
+.post-date {
+  font-size: 0.9rem;
+  color: #999;
 }
+
+.post-excerpt {
+  margin-top: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
 </style>
 
 {% for post in site.posts %}

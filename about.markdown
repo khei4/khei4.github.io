@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
 
 
@@ -36,15 +35,15 @@ Feel free to contact me via [GitHub](https://github.com/khei4), [LinkedIn](https
 
 ### Presentations
 
-- Presentation about Stack-Move Optimization on Kernel/VM探検隊 No16 ([English slides](pdf/rust_move_optimization.pdf))
+- Presentation about Stack-Move Optimization I implemented on GSoC at Kernel/VM探検隊 No16 ([English slides](pdf/rust_move_optimization.pdf), [Japanese video](https://www.youtube.com/live/1OQDfsq6uTE?feature=shared&t=6538))
 
 - Presentation about Undergraduate Poster: Inference of polynomial invariants for imperative programs ([English slides](pdf/bachelor_poly_inv.pdf))
 
-- Survey about Syntax-Guided Synthesis ([English slides](https://drive.google.com/file/d/1Cd6t8GlnZU5p7USnUyfaD2w-x9hmYgqD/view?usp=sharing))
-
 - Introduction of Clippy await warning about Lock/RefCellRef ([Japanese slides](https://drive.google.com/file/d/1HeiQAV4bf1CPV6ceNoI55MgcwGamfmnW/view), [Japanese Blog](https://www.estie.jp/blog/entry/2022/08/01/160827))
 
-- Eulerian cycle, Rust, Bit tricks ([Japanese slides](pdf/euler_rust_bit.pdf))
+- Survey about Syntax-Guided Synthesis ([English slides](https://drive.google.com/file/d/1Cd6t8GlnZU5p7USnUyfaD2w-x9hmYgqD/view?usp=sharing))
+
+- Eulerian cycle, Rust, Bit tricks at Hokkaido University HUIT-Club Seminar.([Japanese slides](pdf/euler_rust_bit.pdf))
 
 ### Theses and Posters
 
@@ -54,7 +53,7 @@ Feel free to contact me via [GitHub](https://github.com/khei4), [LinkedIn](https
 - Master Thesis: Finding Missing Automatic Vectorization Opportunity by
 Diﬀerential Testing [Graduate CS] <br>
    ([pdf](pdf/master_thesis.pdf))
-- Could LLM be LLVM superoptimizer? [xSig 2023]2024<br>
+- Could LLM be LLVM superoptimizer? [xSig 2023]<br>
    ([Japanese poster](pdf/xSIGasano.pdf))
   - I implemented LLVM middle-end path, that asks ChatGPT to optimize the peephole optimization tests, and evaluate them by llvm-mca.
   - Got [Poster Award](https://xsig.ipsj.or.jp/2023/).
