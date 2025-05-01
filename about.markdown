@@ -40,6 +40,8 @@ Feel free to contact me via [GitHub](https://github.com/khei4), [LinkedIn](https
 
 - Presentation about Undergraduate Poster: Inference of polynomial invariants for imperative programs ([English slides](pdf/bachelor_poly_inv.pdf))
 
+- Survey about Syntax-Guided Synthesis ([English slides](https://drive.google.com/file/d/1Cd6t8GlnZU5p7USnUyfaD2w-x9hmYgqD/view?usp=sharing))
+
 - Introduction of Clippy await warning about Lock/RefCellRef ([Japanese slides](https://drive.google.com/file/d/1HeiQAV4bf1CPV6ceNoI55MgcwGamfmnW/view), [Japanese Blog](https://www.estie.jp/blog/entry/2022/08/01/160827))
 
 - Eulerian cycle, Rust, Bit tricks ([Japanese slides](pdf/euler_rust_bit.pdf))
