@@ -54,11 +54,14 @@ Feel free to contact me via [GitHub](https://github.com/khei4), [LinkedIn](https
 - Master Thesis: Finding Missing Automatic Vectorization Opportunity by
 Diﬀerential Testing [Graduate CS] <br>
    ([pdf](pdf/master_thesis.pdf))
-- Could LLM be LLVM optimizer? [xSig 2023]2024<br>
+- Could LLM be LLVM superoptimizer? [xSig 2023]2024<br>
    ([Japanese poster](pdf/xSIGasano.pdf))
-  - [Poster Award](https://xsig.ipsj.or.jp/2023/)
+  - I implemented LLVM middle-end path, that asks ChatGPT to optimize the peephole optimization tests, and evaluate them by llvm-mca.
+  - Got [Poster Award](https://xsig.ipsj.or.jp/2023/).
 
 ### Miscellaneous
 
 - [TechBookFest Japanese Leaflet writing](https://techbookfest.org/event/tbf06/circle/61900008)
-   <br> Explain about LLVM overview and steps tweaking LLVM Frontend to parse Python-subset language.
+   <br> Explaining about LLVM overview and steps tweaking LLVM Frontend to parse Python-subset language.
+
+- [LifeGame by pure JS](https://hei-7b848.firebaseapp.com/bokulife/index.html) <br> A JS-practice implementation of Conway's Game of Life, configurable in detail.
