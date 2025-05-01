@@ -21,10 +21,12 @@
 title: khei4 Blog
 email: kk.asano.luxy@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
+github_username:  khei4
 social:
   github: khei4
   linkedin: kohei-asano-8082881b2
   x: khei4444
+  hatena: crowpenguin
 
 # Build settings
 theme: minima
