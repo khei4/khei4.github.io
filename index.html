@@ -46,16 +46,25 @@ title: khei4's Blog
 
 {% for post in site.posts %}
 <section class="postPreview">
-    <header>
-        <h1>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-        </h1>
-        <time datetime="{{ post.date | date: '%Y-%m-%d' }}" pubdate>
-            {{ post.date | date: '%B %d, %Y' }}
-        </time>
-    </header>
-    <section>
-        {{ post.content | strip_html | truncatewords: 20 }}
-    </section>
+  <header>
+    <h2 class="post-title">
+      {% if post.external_url %}
+        <a href="{{ post.external_url }}" class="external-link" target="_blank" rel="noopener noreferrer">
+          <span class="external-label">[External]</span> {{ post.title }}
+        </a>
+      {% else %}
+        <a href="{{ post.url }}" class="internal-link">
+          {{ post.title }}
+        </a>
+      {% endif %}
+    </h2>
+    <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-date" pubdate>
+      {{ post.date | date: '%B %d, %Y' }}
+    </time>
+  </header>
+
+  <div class="post-excerpt">
+    {{ post.excerpt | strip_html | truncatewords: 40 }}
+  </div>
 </section>
 {% endfor %}
