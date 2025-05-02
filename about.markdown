@@ -6,13 +6,11 @@ title: About
 
 Hi! My name is **Kohei Asano**, I use **khei4** on the Internet.
 
-I'm a Software Engineer at [Sony Interactive Entertainment](https://sonyinteractive.com/en/), working on [PS5 WebKit](https://www.playstation.com/en-us/oss/ps5/webkit/). I love the (Soft/Hardware, any)Engineers to make the world and jobs convenient/humorous/swift, I wanna become one of them, and wanna contribute the tools that help any Engineers.
+I'm a Software Engineer at [Sony Interactive Entertainment](https://sonyinteractive.com/en/), mainly working on [PS5 WebKit](https://www.playstation.com/en-us/oss/ps5/webkit/). I love the (Soft/Hardware, any)Engineers and creators to make the world convenient/humorous/swift, I wanna become one of them. I wanna contribute the tools that help those Engineers.
 
 I studied Mathematics at the University of Hokkaido and Computer Science at the University of Tokyo.
 
 Feel free to contact me via [GitHub](https://github.com/khei4), [LinkedIn](https://www.linkedin.com/in/kohei-asano-8082881b2/), [X](https://x.com/khei4444).
-
-### Experiences
 
 ### Projects
 
@@ -20,7 +18,7 @@ Feel free to contact me via [GitHub](https://github.com/khei4), [LinkedIn](https
   - Designed a reservoir-computing architecture that re-uses RISC-V micro-architectural state as the nonlinear reservoir.
   - I created [RISC-V cycle-accurate emulator](https://github.com/Reservoir-In-Processor/rip-sim), that has branch predictions and stats calculator for that.
 
-### OSS contributions
+### OSS
 
 - [LLVM](https://github.com/llvm/llvm-project/commits/main/?author=khei4) -- Middle-end passes, MemCpyOpt, InstCombine as Google Summer of Code 2023 and more.
   - [Google Summer of Code Final Report](https://www.khei4.com/gsoc2023/)
@@ -33,9 +31,10 @@ Feel free to contact me via [GitHub](https://github.com/khei4), [LinkedIn](https
 - [Polynomial Invariant calculator](https://github.com/khei4/poly_inv) -- Rust implementation of C-subset Parser and Algebraic Invariant Computation using Groebner basis for my Undergraduate Poster session.
 
 - [Symbolic Differentiator](https://github.com/khei4/sym_diff) -- Rust implementation of Mathematical Expression Parser and Differentiation algorithm on the paper.
+  - [English slides](pdf/Sym_diff_english.pdf)
   - [Japanese blog](https://qiita.com/KoheiAsano/items/943c66e226ec8f44d106)
 
-- [Corner Case Faker Fuzzer](https://github.com/khei4/ccffer) -- Golang Generics Function's Type-Level Fuzzer exploiting fuzzing and generics on GoLang 1.18 at Mercari Online Spring Internship for Gophers 2022
+- [Corner Case Faker Fuzzer](https://github.com/khei4/ccffer) -- Golang Generics Function's Type-Level Fuzzer exploiting fuzzing and generics on GoLang 1.18.
 
 ### Presentations
 
@@ -60,7 +59,7 @@ Feel free to contact me via [GitHub](https://github.com/khei4), [LinkedIn](https
   - Got [Poster Award](https://xsig.ipsj.or.jp/2023/).
 
 - Master Thesis: Finding Missing Automatic Vectorization Opportunity by Diﬀerential Testing [Graduate CS] <br>
-   ([pdf](pdf/master_thesis.pdf))
+   ([pdf](pdf/master_thesis.pdf), [Japanese slides](pdf/kohei-asano_takamaeda-lab_2024_master.pdf))
 
 ### Miscellaneous
 
