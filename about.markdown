@@ -50,22 +50,22 @@ Feel free to contact me via [GitHub](https://github.com/khei4), [LinkedIn](https
 
 ### Theses and Posters
 
-- Rust Implementation of Polynomial Invariant Computation using Groebner Basis[Undergraduate Mathematics] <br>
+- Rust Implementation of Polynomial Invariant Computation using Groebner Basis[Undergraduate Mathematics]
    ([slides](pdf/bachelor_poly_inv.pdf))
 
-- Could LLM be LLVM superoptimizer? [xSig 2023]<br>
+- Could LLM be LLVM superoptimizer? [xSig 2023]
    ([Japanese poster](pdf/xSIGasano.pdf))
   - I implemented LLVM middle-end path, that asks ChatGPT to optimize the peephole optimization tests, and evaluate them by llvm-mca.
   - Got [Poster Award](https://xsig.ipsj.or.jp/2023/).
 
-- Master Thesis: Finding Missing Automatic Vectorization Opportunity by Diﬀerential Testing [Graduate CS] <br>
+- Master Thesis: Finding Missing Automatic Vectorization Opportunity by Differential Testing [Graduate CS]
    ([pdf](pdf/master_thesis.pdf), [Japanese slides](pdf/kohei-asano_takamaeda-lab_2024_master.pdf))
 
 ### Miscellaneous
 
-- [TOEIC Reading & Listening 840]()[2024/09]
+- [TOEIC Reading & Listening 840](pdf/kohei-asano_takamaeda-lab_2024_master.pdf) [2024/09]
 
 - [TechBookFest Japanese Leaflet writing](https://techbookfest.org/event/tbf06/circle/61900008)
-   <br> Explaining about LLVM overview and steps tweaking LLVM Frontend to parse Python-subset language.
+   Explaining about LLVM overview and steps tweaking LLVM Frontend to parse Python-subset language.
 
-- [LifeGame by pure JS](https://hei-7b848.firebaseapp.com/bokulife/index.html) <br> A JS-practice implementation of Conway's Game of Life, configurable in detail.
+- [LifeGame by pure JS](https://hei-7b848.firebaseapp.com/bokulife/index.html) A JS-practice implementation of Conway's Game of Life, configurable in detail.
