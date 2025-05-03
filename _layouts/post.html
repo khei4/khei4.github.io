@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<style>
+.post {
+    margin: 30px 0;
+}
+
+.post > header {
+    margin: 15px 0;
+}
+.backLink {
+    display: block;
+    margin: 10px 0;
+}
+.post > header > h1 {
+    display: inline;
+    font-size: 32px;
+}
+.post > section > h2 {
+    font-size: 28px;
+    margin: 28px 0 10px 0;
+}
+.post > section > h3 {
+    font-size: 24px;
+    margin: 24px 0 10px 0;
+}
+
+</style>
+{% if page.external_url %}
+<meta http-equiv="refresh" content="0;url={{ page.external_url }}" />
+{% endif %}
+<section class="post">
+    <header>
+        <a href="/" class="backLink">&laquo; Back to article overview.</a>
+        <h1>{{ page.title }}</h1>
+        <time datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>
+            {{ page.date | date: '%d. %B %Y' }}
+        </time>
+    </header>
+    <section>
+        {% if page.external_url %}
+        This article is published on an external site:
+        <a href="{{ page.external_url }}">{{ page.external_url }}</a>
+        {% else %}
+        {% include toc.html html=content %}
+        {{ content }}
+        {% endif %}
+    </section>
+</section>
