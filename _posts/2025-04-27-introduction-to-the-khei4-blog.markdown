@@ -15,8 +15,9 @@ The following picture is Shibazakura at Hitsujiyama Park, Hitsuji means the shee
 ![Image](/assets/mow.jpg)
 
 Sample lifegame movie :)
-
+<!-- markdownlint-disable-next-line MD033 -->
 <video controls width="600">
+<!-- markdownlint-disable-next-line MD033 -->
   <source src="/assets/bokulife.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
