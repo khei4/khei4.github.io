@@ -10,7 +10,7 @@ I'm working on Sony Interactive Entertainment Inc. for now. And eager to contrib
 
 ## Image and movie sample
 
-The following picture is Shibazakura at Hitsujiyama Park, Hitsuji means the sheep in Japanese, and its park has real sheeps.
+The following picture is Shibazakura at [Hitsujiyama][hitsujiyama] Park, Hitsuji means the sheep in Japanese, and its park has real sheeps.
 
 ![Image](/assets/mow.jpg)
 
@@ -48,3 +48,10 @@ int main() {
 const anExampleVariable = "Hello TS!"
 console.log(anExampleVariable)
 ```
+
+## Epilogue
+
+End.
+
+[hitsujiyama][https://www.city.chichibu.lg.jp/multilingual/#itemid11317]
+[upstash][https://upstash.com/]
