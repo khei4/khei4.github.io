@@ -41,7 +41,8 @@
   location: "Tokyo, Japan",
   dates: "Apr 2024 - Present",
 )
-- Developing and maintaining *PS5 WebKit* (browser engine)
+- Developing and maintaining *PS5 WebKit* (browser engine) and PlayStation's *WebView* component
+- Developed infrastructure for web-based Media Apps during a 3-month overseas assignment
 - Focus on performance, stability, and security-level production software
 
 #work(
