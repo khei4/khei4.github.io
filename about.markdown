@@ -9,7 +9,7 @@ I am a Software Engineer at [Sony Interactive Entertainment](https://sonyinterac
 
 I studied Mathematics at Hokkaido University and Computer Science at the University of Tokyo.
 
-Feel free to contact me via [GitHub](https://github.com/khei4), [LinkedIn](https://www.linkedin.com/in/kohei-asano-8082881b2/), or [X](https://x.com/khei4444).
+Feel free to contact me via [GitHub](https://github.com/khei4), [LinkedIn](https://www.linkedin.com/in/kohei-asano-8082881b2/), or [X](https://x.com/khei4444). You can also find my [Resume (PDF)](/resume.pdf).
 
 ### Projects
 
