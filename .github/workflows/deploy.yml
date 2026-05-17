@@ -1,0 +1,61 @@
+name: "Build and Deploy Site"
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 1. Setup Typst and Build Resume
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v4
+
+      - name: Compile resume
+        run: typst compile resume.typ
+
+      # 2. Setup Ruby and Build Jekyll Site
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2' # Standard version
+          bundler-cache: true
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      # 3. Integrate Resume into Jekyll Output
+      - name: Integrate Resume
+        run: |
+          mkdir -p _site/pdf
+          mv resume.pdf _site/pdf/resume.pdf
+
+      # 4. Upload Artifact for GitHub Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
