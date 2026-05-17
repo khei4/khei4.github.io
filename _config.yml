@@ -22,6 +22,7 @@ title: khei4 Blog
 email: kk.asano.luxy@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 github_username:  khei4
+repository: khei4/khei4.github.io
 social:
   github: khei4
   linkedin: kohei-asano-8082881b2
@@ -38,6 +39,9 @@ kramdown:
 theme: minima
 plugins:
   - jekyll-feed
+
+excerpt_separator: <!--more-->
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -36,6 +36,7 @@ jobs:
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+          PAGES_REPO_NWO: khei4/khei4.github.io
 
       # 3. Integrate Resume into Jekyll Output
       - name: Integrate Resume
