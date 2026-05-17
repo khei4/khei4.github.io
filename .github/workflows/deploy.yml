@@ -42,7 +42,8 @@ jobs:
       - name: Integrate Resume
         run: |
           mkdir -p _site/pdf
-          mv resume.pdf _site/pdf/resume.pdf
+          cp resume.pdf _site/pdf/resume.pdf
+          ls -R _site/pdf
 
       # 4. Upload Artifact for GitHub Pages
       - name: Upload artifact
